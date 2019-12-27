@@ -1,4 +1,3 @@
-window.onload = function(){
   var port = process.env.PORT || 3000;
   //Make connection
   var socket = io.connect('http://localhost:$`{port}`');
@@ -31,4 +30,4 @@ window.onload = function(){
   socket.on('typing', function(data){
     typing.innerHTML = '<p><em>' + data + ' is typing </em></p>';
   });
-};
+
