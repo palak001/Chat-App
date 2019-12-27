@@ -1,5 +1,5 @@
 window.onload = function(){
-  port = process.env.PORT || 3000;
+  var port = process.env.PORT || 3000;
   //Make connection
   var socket = io.connect('http://localhost:$`{port}`');
 
