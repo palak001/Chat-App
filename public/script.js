@@ -1,6 +1,6 @@
 //   //Make connection
 //   var socket = io.connect('http://localhost:`${port}`');
-  var socket = io.();
+  var socket = io();
 
   // query dom
   var output = document.getElementById('output');
