@@ -12,6 +12,14 @@
 
   send.addEventListener('click', function(e){
     e.preventDefault(); // prevents page reloading
+    if(message.value == "" || message.value == " "){
+      alert("Empty string now allowed!");
+      return false;
+    }
+    if(handle.value == ""){
+      alert("Enter handle !");
+      return false;
+    }
     socket.emit('chat', {message: message.value, handle: handle.value});
     message.value="";
   });
@@ -30,4 +38,3 @@
   socket.on('typing', function(data){
     typing.innerHTML = '<p><em>' + data + ' is typing </em></p>';
   });
-
